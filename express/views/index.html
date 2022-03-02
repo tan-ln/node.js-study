@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/index.css">
+</head>
+<body>
+    <ul>
+        {{ each member }}
+            <li>
+                <img src="{{ $value.avatar }}" />
+                <span>{{ $value.name }}</span>
+            </li>
+        {{ /each }}
+    </ul>
+
+    <!-- 上传文件 -->
+    <form action="/add" method="POST" enctype="multipart/form-data">
+        <label for="name">
+            名字：
+            <input type="text" name="name" id="name">
+        </label>
+        <label for="avatar">
+            头像：
+            <input type="file" name="avatar" id="avatar">
+        </label>
+        <button type="submit">提交</button>
+    </form>
+</body>
+</html>
