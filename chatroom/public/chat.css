@@ -1,0 +1,13 @@
+.msgs_box {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    height: 300px;
+    width: 70%;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.me  {
+    margin: 50px;
+    text-align: center;
+}
